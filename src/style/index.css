@@ -1,0 +1,329 @@
+@import url(./reset.css);
+
+body {
+  background-color: var(--app-bg-dark);
+}
+
+.container {
+  width: min(100% - 30px, 1200px);
+  margin-inline: auto;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Variables
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+:root {
+  --app-bg-dark: #32333d;
+  --app-header-footer: #27272f;
+  --app-content-bg: #0f1015;
+  --app-shadow: #1e1e24;
+  --app-purple: #7447d1;
+  --app-purple-hover: #5b2eb7;
+  --app-blue: #257afd;
+  --app-blue-hover: #025fee;
+  --app-white: #fff;
+  --app-gray: #c1c1c4;
+  --app-green: #82c55b;
+  --app-green-hover: #4A9833;
+  --app-error: #FF9494;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Header
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  background-color: var(--app-header-footer);
+  font-size: 0px;
+  height: 56px;
+  line-height: 56px;
+  box-shadow: 2px 3px 3px var(--app-shadow);
+}
+
+.flexbox h1 {
+  line-height: 56px;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  word-spacing: 2.5px;
+  color: var(--app-green);
+}
+
+.flexbox p {
+  margin-left: 30px;
+  line-height: 56px;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  word-spacing: 2.5px;
+  color: var(--app-white);
+}
+
+.links {
+  display: flex;
+}
+
+header p:hover {
+  transition: all 0.3s ease-in-out;
+  color: var(--app-green);
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Main
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+section {
+  padding-top: 60px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 400;
+  color: var(--app-white);
+}
+
+section .flex h2 {
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  margin-top: 15px;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  padding-bottom: 60px;
+} 
+
+.characters {
+  display: grid;
+  place-items: center;
+  padding-top: 10px;
+  color: var(--app-white);
+}
+
+.grid h2 {
+  font-size: 24px;
+}
+
+.characters img, .details {
+  padding-top: 10px;
+}
+
+.characters img:hover {
+  cursor: pointer;
+}
+
+section .flex {
+  justify-content: space-between;
+}
+
+button {
+  margin-left: 10px;
+  padding: 0 15px;
+  font-size: 18px;
+  line-height: 35px;
+  border-radius: 8px;
+}
+
+.sort {
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  color: var(--app-white);
+  background-color: var(--app-green);
+}
+
+.sort:hover {
+  background-color: var(--app-green-hover);
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Info Components
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.info, .error-page, .form-page {
+  display: grid;
+  place-items: center;
+  height: calc(100vh - 56px - 60px);
+}
+
+.flex {
+  display: flex;
+}
+
+.info h2 {
+  height: 55px;
+  line-height: 42px;
+  font-size: 42px;
+  color: var(--app-white);
+}
+
+.box {
+  margin-left: 50px;
+  padding: 20px;
+}
+
+.box div p {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--app-gray);
+}
+
+.box p + p {
+  margin-top: 15px;
+}
+
+span {
+  font-weight: 600;
+}
+
+.fake {
+  margin-left: 0px;
+  margin-top: 30px;
+  color: var(--app-white);
+  background-color: var(--app-green);
+  transition: all 0.3s ease-in-out;
+}
+
+.fake:hover {
+  background-color: var(--app-green-hover);
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Form
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.form {
+  padding: 40px 35px;
+  background-color: var(--app-header-footer);
+  border-radius: 5px;
+}
+
+form {
+  margin-top: 30px;
+  display: block;
+  text-align: right;
+  width: 300px;
+}
+
+input {
+  height: 42px;
+  width: 100%;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 0 15px;
+  border-radius: 5px;
+  color: var(--app-white);
+  background-color: var(--app-shadow);
+}
+
+input[type=submit] {
+  display: block;
+  margin-left: 193px;
+  margin-top: 30px;
+  width: 35%;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: var(--app-white);
+  background-color: var(--app-green);
+}
+
+input[type=submit]:hover {
+  background-color: var(--app-green-hover);
+}
+
+input + input {
+  margin-top: 25px;
+}
+
+form span {
+  color: var(--app-error);
+  height: 18  px;
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Error Page
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.error-page {
+  display: grid;
+  place-items: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-page h2 {
+  font-size: 50px;
+  line-height: 50px;
+  color: var(--app-white);
+}
+
+.error-page p {
+  margin-top: 10px;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--app-gray);
+}
+
+.error-page button {
+  margin-left: 0;
+  margin-top: 20px;
+  color: var(--app-white);
+  background-color: var(--app-green);
+}
+
+.error-page button:hover {
+  background-color: var(--app-green-hover);
+}
+
+.error-msg {
+  margin-top: 10%;
+}
+
+.error-image {
+  margin-left: 50px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Footer
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+footer {
+  height: 60px;
+  background-color: var(--app-header-footer);
+}
+
+footer h2 {
+  line-height: 60px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  word-spacing: 2.5px;
+  color: var(--app-green);
+}
+
+footer p {
+  line-height: 60px;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  word-spacing: 2.5px;
+  color: var(--app-white);
+}
